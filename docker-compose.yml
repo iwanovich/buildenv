@@ -10,7 +10,7 @@ services:
     links:
       - db:mysql
     volumes:
-      - ./volumes/gitea_app:/data
+      - /var/lib/docker/volumes/gitea_data:/data
     ports:
       - "${GITEA_SSH_PORT}:22"
       - "${GITEA_WEB_PORT}:3000"
